@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-portal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-portal
+  template:
+    metadata:
+      labels:
+        app: student-portal
+    spec:
+      containers:
+        - name: student-portal
+          image: YOUR_DOCKERHUB_USERNAME/student-portal:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
