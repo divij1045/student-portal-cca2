@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: student-portal
-          image: YOUR_DOCKERHUB_USERNAME/student-portal:latest
+          image: divij45/student-portal:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
